@@ -14,7 +14,11 @@
     "prod": "webpack --config ./webpack.prod.js && clientlib --verbose",
     "start": "webpack-dev-server --open --config ./webpack.dev.js",
     "sync": "aemsync -d -p ../ui.apps/src/main/content",
-    "watch": "webpack-dev-server --config ./webpack.dev.js --env writeToDisk & chokidar -c \"clientlib\" ./dist & aemsync -w ../ui.apps/src/main/content"
+    "watchOrg": "webpack-dev-server --config ./webpack.dev.js --env writeToDisk & chokidar -c \"clientlib\" ./dist & aemsync -w ../ui.apps/src/main/content",
+    "watch": "start /b webpack-dev-server --config ./webpack.dev.js --env writeToDisk & start /b chokidar -c \"clientlib\" ./dist & start /b aemsync -w ../ui.apps/src/main/content",
+    "watch1": "webpack-dev-server --config ./webpack.dev.js --env writeToDisk",
+    "watch2": "chokidar -c \"clientlib\" ./dist",
+    "watch3": "aemsync -w ../ui.apps/src/main/content"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
