@@ -1,0 +1,1 @@
+start npm run watch1 & start npm run watch2 & start npm run watch3

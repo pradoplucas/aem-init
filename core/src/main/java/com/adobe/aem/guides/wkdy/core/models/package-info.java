@@ -13,7 +13,17 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-@Version("1.0")
+
+/* Whenever a changes are made to the files in this package, the package 
+ *  version must be adjusted semantically. If not, the Maven project’s 
+ * bnd-baseline-maven-plugin will detect an invalid package version and 
+ * break the built. Luckily, on failure the Maven plugin reports the invalid 
+ * Java package version as well as the the version it should be. Just updated 
+ * the @Version("...") declaration in the violating Java package’s 
+ * package-info.java to the version recommended by the plugin to fix.
+ */
+
+@Version("1.1.0")
 package com.adobe.aem.guides.wkdy.core.models;
 
 import org.osgi.annotation.versioning.Version;
